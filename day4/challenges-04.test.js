@@ -45,13 +45,15 @@ cities that begin with the letters A through J, inclusive.
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
-  const regex = /\S[A-J]\w*/g;
+  const regex = /^[A-J]\w*/g;
   const array = [];
   arr.forEach((value) => {
     if(regex.test(value)){
         array.push(value)
+        console.log(array)
     }
 })
+console.log(array);
   return array;
 
 };
