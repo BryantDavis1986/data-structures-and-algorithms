@@ -118,20 +118,18 @@ test('It should return numbers divisible by five, then raise two to the power of
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
-    for(let i = 0; i < input.length; i++){
-        for(let j = 0; j < input[i].length; j++){
-            if(!input[j] % 5 === 0 && isNaN(input[j])){
-                // console.log(input[j]);
-                input[j].splice(j, 1);
-                j--;
-            }else {
-                console.log('before pow ', input[j])
-               console.log('after pow ', input[j] = Math.pow(2, input[j]));
-            }
-        }
-    }
-    console.log(input);
-    return input;
+  const results = input.map(value=>{
+    return value.filter(potato =>{
+      if(typeof(potato) === 'number' && potato % 5 === 0){
+        return true;
+      }else {
+        return false;
+      }
+    }).map(carrot => {
+      return Math.pow(2, carrot);
+    })
+  })
+  return results;
 };
 
 
