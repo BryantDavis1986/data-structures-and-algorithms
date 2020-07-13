@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\401-DOTNET",
+    "\\401-DOTNET\\Challenges",
+    "\\401-DOTNET\\Challenges\\Code-Challenge-02",
+    "\\401-DOTNET\\Challenges\\Code-Challenge-02\\ArrayShift",
+    "\\401-DOTNET\\Challenges\\Code-Challenge-02\\ArrayShift\\ArrayShift"
   ],
+  "SelectedNode": "\\401-DOTNET\\Challenges\\Code-Challenge-02\\ArrayShift\\ArrayShift",
   "PreviewInSolutionExplorer": false
 }
