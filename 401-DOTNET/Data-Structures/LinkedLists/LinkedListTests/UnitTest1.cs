@@ -102,5 +102,133 @@ namespace LinkedListTests
             Assert.Equal(expected, value);
 
         }
+        [Fact]
+
+        public void CanAddNodeAtEnd()
+        {
+         
+            // Arrange
+            LinkedList ll = new LinkedList();
+
+            ll.Insert(2);
+            ll.Insert(3);
+            ll.Insert(1);
+            // Act
+            string expected = "1 -> 3 -> 2 -> 5 -> NULL";
+            ll.Append(5);
+            string actual = ll.ToString();
+            // Assert
+            Assert.Equal(expected, actual);
+
+
+        }
+        [Fact]
+
+        public void CanAddMultipleNodeAtEnd()
+        {
+
+            // Arrange
+            LinkedList ll = new LinkedList();
+
+            ll.Insert(2);
+            ll.Insert(3);
+            ll.Insert(1);
+
+            ll.Append(5);
+            ll.Append(15);
+            ll.Append(50);
+
+            // Act
+            string expected = "1 -> 3 -> 2 -> 5 -> 15 -> 50 -> NULL";
+            string actual = ll.ToString();
+            // Assert
+            Assert.Equal(expected, actual);
+
+
+        }
+        [Fact]
+
+        public void CanInsertNodeBefore()
+        {
+
+            // Arrange
+            LinkedList ll = new LinkedList();
+
+            ll.Insert(2);
+            ll.Insert(3);
+            ll.Insert(1);
+            ll.InsertBefore(3, 5);
+
+            // Act
+            string expected = "1 -> 5 -> 3 -> 2 -> NULL";
+            string actual = ll.ToString();
+            // Assert
+            Assert.Equal(expected, actual);
+
+
+        }
+        [Fact]
+
+        public void CanInsertNodeBeforeFirstNode()
+        {
+
+            // Arrange
+            LinkedList ll = new LinkedList();
+
+            ll.Insert(2);
+            ll.Insert(3);
+            ll.Insert(1);
+            ll.InsertBefore(1, 5);
+
+            // Act
+            string expected = "5 -> 1 -> 3 -> 2 -> NULL";
+            string actual = ll.ToString();
+            // Assert
+            Assert.Equal(expected, actual);
+
+
+        }
+        [Fact]
+
+        public void CanInsertNodeAfterMiddleNode()
+        {
+
+            // Arrange
+            LinkedList ll = new LinkedList();
+
+            ll.Insert(2);
+            ll.Insert(3);
+            ll.Insert(1);
+            ll.InsertAfter(3, 5);
+
+            // Act
+            string expected = "1 -> 3 -> 5 -> 2 -> NULL";
+            string actual = ll.ToString();
+            // Assert
+            Assert.Equal(expected, actual);
+
+
+        }
+        [Fact]
+
+        public void CanInsertNodeAtEnd()
+        {
+
+            // Arrange
+            LinkedList ll = new LinkedList();
+
+            ll.Insert(2);
+            ll.Insert(3);
+            ll.Insert(1);
+            ll.InsertAfter(2, 5);
+
+            // Act
+            string expected = "1 -> 3 -> 2 -> 5 -> NULL";
+            string actual = ll.ToString();
+            // Assert
+            Assert.Equal(expected, actual);
+
+
+        }
     }
 }
