@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace LLLibrary
 {
@@ -133,6 +134,37 @@ namespace LLLibrary
                     Current = Current.Next;
                 }
             }
+        public int kthFromEnd(int key)
+        {
+            Current = Head;
+            Node walking = Current;
+            Node running = Current;
+
+            int k = key;
+            if (k < 0)
+            {
+                throw new Exception("K cannot be a negative number");
+
+            }
+            while (k > 0)
+            {
+                if(running.Next != null)
+                {
+                    k--;
+                    running = running.Next;
+                }
+                else
+                {
+                    throw new Exception("K cannot be same length as Linked List");
+                }
+            }
+            while(running.Next != null)
+            {
+                walking = walking.Next;
+                running = running.Next;
+            }
+            return walking.Value;
+        }
     }
 
     }

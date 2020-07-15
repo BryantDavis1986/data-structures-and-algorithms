@@ -230,5 +230,81 @@ namespace LinkedListTests
 
 
         }
+        [Fact]
+        public void CanReturnKnthHappyPath()
+        {
+            LinkedList ll = new LinkedList();
+
+            ll.Insert(10);
+            ll.Insert(20);
+            ll.Insert(30);
+            ll.Insert(40);
+            ll.Insert(50);
+
+            int value = ll.kthFromEnd(1);
+
+            Assert.Equal(20, value);
+        }
+        [Fact]
+        public void CanReturnExceptionForEqualLength()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(10);
+            list.Insert(20);
+            list.Insert(30);
+            list.Insert(40);
+            list.Insert(50);
+            // Act 
+
+            // capture the exception inside of a delegate, and confirm the message is what was thrown. 
+            var ex = Assert.Throws<Exception>(() => list.kthFromEnd(5));
+            Assert.Equal("K cannot be same length as Linked List", ex.Message);
+        }
+        [Fact]
+        public void CannotReceiveNegativeIntK()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(10);
+            list.Insert(20);
+            list.Insert(30);
+            list.Insert(40);
+            list.Insert(50);
+            // Act 
+
+            // capture the exception inside of a delegate, and confirm the message is what was thrown. 
+            var ex = Assert.Throws<Exception>(() => list.kthFromEnd(-5));
+            Assert.Equal("K cannot be a negative number", ex.Message);
+        }
+        [Fact]
+        public void CanReturnExceptionForLengthOfOne()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(10);
+
+            // Act 
+
+            // capture the exception inside of a delegate, and confirm the message is what was thrown. 
+            var ex = Assert.Throws<Exception>(() => list.kthFromEnd(1));
+            Assert.Equal("K cannot be same length as Linked List", ex.Message);
+        }
+        [Fact]
+        public void CanReturnExceptionForLengthLargerThanLL()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(10);
+            list.Insert(20);
+            list.Insert(30);
+            list.Insert(40);
+            list.Insert(50);
+            // Act 
+
+            // capture the exception inside of a delegate, and confirm the message is what was thrown. 
+            var ex = Assert.Throws<Exception>(() => list.kthFromEnd(6));
+            Assert.Equal("K cannot be same length as Linked List", ex.Message);
+        }
     }
 }
