@@ -33,7 +33,7 @@ Create a console app with a method that receives 2 different Link Lists that com
 
 ### Whiteboard Visual
 ***[Your Whiteboard Image]***
-![Final](final.jpg)
+![Final](Final.jpg)
 
 
 ---
