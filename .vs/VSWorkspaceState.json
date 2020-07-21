@@ -2,12 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\401-DOTNET",
-    "\\401-DOTNET\\Challenges",
-    "\\401-DOTNET\\Challenges\\ll-zip",
-    "\\401-DOTNET\\Challenges\\ll-zip\\ll-zip",
-    "\\401-DOTNET\\Challenges\\ZipLinkedListsTest",
-    "\\401-DOTNET\\Challenges\\ZipLinkedListsTest\\ZipLinkedListsTest"
+    "\\Advanced C#",
+    "\\Advanced C#\\Challenges"
   ],
-  "SelectedNode": "\\401-DOTNET\\Challenges\\ZipLinkedListsTest\\ZipLinkedListsTest\\ZipLinkedListsTest.csproj",
+  "SelectedNode": "\\Advanced C#\\Challenges",
   "PreviewInSolutionExplorer": false
 }
