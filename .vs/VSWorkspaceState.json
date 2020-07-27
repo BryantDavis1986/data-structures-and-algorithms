@@ -1,13 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\401-DOTNET",
     "\\Advanced C#",
-    "\\Advanced C#\\Challenges",
     "\\Advanced C#\\Challenges\\FIFOAnimalShelter",
     "\\Advanced C#\\Challenges\\MultiBracketValidation",
-    "\\Advanced C#\\Challenges\\MultiBracketValidation\\MultiBracketValidation"
+    "\\Advanced C#\\Challenges\\MultiBracketValidation\\MultiBracketValidation",
+    "\\Advanced C#\\Data-Structures"
   ],
-  "SelectedNode": "\\401-DOTNET\\README.md",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
