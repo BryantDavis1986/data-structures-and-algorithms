@@ -14,7 +14,8 @@
 |----------|:-----------------------------------------------------------------------------:|
 |[Data Structure 01](https://github.com/BryantDavis1986/data-structures-and-algorithms/tree/master/Advanced%20C%23/Data-Structures/LinkedLists) 	|Linked List       	|
 |[Data Structure 02](https://github.com/BryantDavis1986/data-structures-and-algorithms/tree/master/Advanced%20C%23/Data-Structures/StacksAndQueues) 	|Stacks and Queues       	|
-|[Data Structure 02](https://github.com/BryantDavis1986/data-structures-and-algorithms/tree/master/Advanced%20C%23/Data-Structures/Trees) 	|Trees       	|
+|[Data Structure 03](https://github.com/BryantDavis1986/data-structures-and-algorithms/tree/master/Advanced%20C%23/Data-Structures/Trees) 	|Trees       	|
+|[Data Structure 04](https://github.com/BryantDavis1986/data-structures-and-algorithms/tree/master/Advanced%20C%23/Data-Structures/HashTableImplementation) 	|Trees       	|
 
 
 # Javascript
