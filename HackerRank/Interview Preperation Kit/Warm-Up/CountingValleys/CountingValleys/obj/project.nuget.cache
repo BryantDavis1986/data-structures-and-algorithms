@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "C4f0/sws//QQicAk4C4erNwM9ru3h8hDNIsfz67ErzIKrCG2zZbOKDwWmPDOuhID3vVF1+nR0DVrzJMgj9YZLQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bryant\\source\\repos\\BryantDavis1986\\data-structures-and-algorithms\\HackerRank\\Interview Preperation Kit\\Warm-Up\\CountingValleys\\CountingValleys\\CountingValleys.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bryant\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Bryant\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
