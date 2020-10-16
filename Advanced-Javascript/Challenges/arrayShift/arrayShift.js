@@ -17,7 +17,6 @@ function insertShiftArray(array, number){
         else if(i < count){
             newArray[i] = array[i];
         }
-            console.log(newArray)
     }
     return newArray;
 }
