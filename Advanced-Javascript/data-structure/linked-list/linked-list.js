@@ -32,7 +32,7 @@ class LinkedList {
     this.current = this.head;
 
     if (this.head == null) {
-      return '';
+      return 'NULL';
     }
     let objString = '';
 

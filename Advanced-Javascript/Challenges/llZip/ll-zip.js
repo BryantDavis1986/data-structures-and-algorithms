@@ -12,10 +12,9 @@ function zipLists(one, two){
         
         if(one.current !== null && two.current !== null){
             newLinkedList.insert(two.current.value);
-            console.log(one);
             newLinkedList.insert(one.current.value);
             two.current = two.current.next;
-            one.current = one.current.bext;
+            one.current = one.current.next;
         }
         else if(one.current !== null && two.current === null){
             newLinkedList.insert(one.current.value);
