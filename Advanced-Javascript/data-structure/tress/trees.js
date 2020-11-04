@@ -73,6 +73,18 @@ class Tree{
             this.inOrder2(root.rightChild, array);
         }
     }
+    findMaximumValue(root){
+        let number = 0;
+        if(!root){
+            return number;
+        }
+        number = root.value;
+        let leftResult = this.findMaximumValue(root.leftChild);
+        let rightResult = this.findMaximumValue(root.rightChild);
+        if(leftResult > number) number = leftResult;
+        if(rightResult > number) number = rightResult;
+        return number;
+    }
 
     breadth(root){
         let result = [];
