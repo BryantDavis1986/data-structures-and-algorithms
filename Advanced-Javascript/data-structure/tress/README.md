@@ -40,19 +40,26 @@ Create the ability to insert a new node, remove a node and peek the first node.
     ✓ PreOrder (2ms)
     ✓ PostOrder (1ms)
     ✓ PostOrder
+    ✓ Breadth (1ms)
 
-----------|----------|----------|----------|----------|-------------------|
-File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
-----------|----------|----------|----------|----------|-------------------|
-All files |     92.5 |       72 |      100 |     92.5 |                   |
- node.js  |      100 |        0 |      100 |      100 |                 4 |
- trees.js |    91.67 |       75 |      100 |    91.67 |          12,33,54 |
-----------|----------|----------|----------|----------|-------------------|
+-----------------|----------|----------|----------|----------|-------------------|
+File             |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-----------------|----------|----------|----------|----------|-------------------|
+All files        |     72.5 |    60.53 |    64.29 |     72.5 |                   |
+ StacksandQueues |    11.11 |        0 |        0 |    11.11 |                   |
+  queue.js       |    11.11 |        0 |        0 |    11.11 |... 29,30,34,35,37 |
+ linked-list     |    33.33 |        0 |        0 |    33.33 |                   |
+  node.js        |    33.33 |        0 |        0 |    33.33 |               5,6 |
+ tress           |    93.22 |    74.19 |      100 |    93.22 |                   |
+  node.js        |      100 |        0 |      100 |      100 |                 4 |
+  trees.js       |    92.73 |    76.67 |      100 |    92.73 |       13,35,56,80 |
+-----------------|----------|----------|----------|----------|-------------------|
 Test Suites: 1 passed, 1 total
-Tests:       3 passed, 3 total
+Tests:       4 passed, 4 total
 Snapshots:   0 total
-Time:        1.015s
+Time:        1.733s
 Ran all test suites matching /tree.test.js/i.
+Advanced-Javascript[breadth-first !]$ 
 ```
 
 ---
@@ -68,6 +75,7 @@ Ran all test suites matching /tree.test.js/i.
 ---
 
 ### Change Log
+1.2: *Added breadth traversal method and a breadth traversal test* - 4 November 2020
 1.1: *Node, Tree classes created. Each method created and tests passing - 2 Nov 2020    
 
 ---

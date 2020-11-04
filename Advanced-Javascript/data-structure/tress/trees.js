@@ -1,6 +1,7 @@
 'use strict';
 
 const Node = require('./node.js');
+const Queue = require('../StacksandQueues/queue.js');
 
 class Tree{
     constructor(){
@@ -20,6 +21,7 @@ class Tree{
     preOrder2(root, array){
 
         array.push(root.value);
+        
         if(root.leftChild !== null){
             this.preOrder2(root.leftChild, array);
         }
@@ -70,6 +72,33 @@ class Tree{
         if(root.rightChild !== null){
             this.inOrder2(root.rightChild, array);
         }
+    }
+
+    breadth(root){
+        let result = [];
+        if(!root){
+            return result;
+        }
+        // a real queue is faster but this does the trick for now
+        let queue = [];
+    queue.push(root);
+        while(queue.length > 0){
+            let row = [];
+            let rowSize = queue.length;
+            while(rowSize > 0){
+                let currentNode = queue.shift();
+                if(currentNode.leftChild){
+                    queue.push(currentNode.leftChild)
+                }
+                if(currentNode.rightChild){
+                    queue.push(currentNode.rightChild)
+                }
+                row.push(currentNode.value);
+                rowSize--;
+            }
+            result.push(row)
+        }
+        return result;
     }
 }
 
