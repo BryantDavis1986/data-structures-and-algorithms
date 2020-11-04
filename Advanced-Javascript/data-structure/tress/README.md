@@ -75,6 +75,7 @@ Advanced-Javascript[breadth-first !]$
 ---
 
 ### Change Log
+1.3: *Added find Max value method and test* - 4 November 2020
 1.2: *Added breadth traversal method and a breadth traversal test* - 4 November 2020
 1.1: *Node, Tree classes created. Each method created and tests passing - 2 Nov 2020    
 
