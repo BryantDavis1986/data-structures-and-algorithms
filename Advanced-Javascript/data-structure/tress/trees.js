@@ -87,7 +87,7 @@ class Tree{
     }
 
     breadth(root){
-        let result = [];
+        // let result = [];
         if(!root){
             return result;
         }
@@ -100,15 +100,15 @@ class Tree{
             while(rowSize > 0){
                 let currentNode = queue.shift();
                 if(currentNode.leftChild){
-                    queue.push(currentNode.leftChild)
+                    queue.push(currentNode.leftChild);
                 }
                 if(currentNode.rightChild){
-                    queue.push(currentNode.rightChild)
+                    queue.push(currentNode.rightChild);
                 }
                 row.push(currentNode.value);
                 rowSize--;
             }
-            result.push(row)
+            // result.push(row)
         }
         return result;
     }
