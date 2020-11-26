@@ -1,52 +1,47 @@
 'use strict';
 
-import LinkedList from '../linked-list/linked-list.js';
-import Node from './node.js';
+const LinkedList = require('../linked-list/linked-list.js');
+const Node = require('./node.js');
 
 class HashTable {
-    constructor(map = []){
-        this.map = map;
+    constructor(num){
+        this.map = new Array(num);
     }
 
     getHash(key){
 
         let total = 0;
         for(let i = 0; i < key.length; i++){
-            total += key[i];
+            total += key.charCodeAt(i);
         }
-
+        // console.log(total)
         let primeValue = total * 599;
-        let index = primeValue % this.map.length;
-
+        // console.log(primeValue);
+        let index = (primeValue % this.map.length);
+        // console.log(this.map.length);
+        // console.log(index);
         return index;
     }
 
     add(key, value){
         let index = this.getHash(key);
-        let htNode = new Node(value, key);
-        let node = new LinkedList(htNode);
-        
-        if(!this.map[index]){
+        // console.log(index);
+        let htNode = new Node(key, value);
+        let node = new LinkedList(htNode, Node);
+        if( typeof this.map[index] !== LinkedList){
             this.map[index] = node;
+            // console.log(JSON.stringify(this.map));
         }
         else{
-            this.map[index].append(node);
+            this.map[index].append(htNode);
         }
 
     }
 
     get(key){
         let index = this.getHash(key);
-
         if(this.map[index]){
 
-            if(this.map[index].count === 1){
-                let first = this.map[index].first;
-
-                return first.value.value;
-            }
-
-            else{
                 let current = this.map[index].head;
 
                 while(current){
@@ -55,7 +50,6 @@ class HashTable {
                     }
                     current = current.next;
                 }
-            }
         }
     }
 
@@ -63,8 +57,8 @@ class HashTable {
         let index = this.getHash(key);
         let location = this.map[index];
 
-        if(!location){
-            let current = this.map[index].first;
+        if(location){
+            let current = this.map[index].current;
 
             while(current){
 
@@ -77,3 +71,5 @@ class HashTable {
         return false;
     }
 }
+
+module.exports = HashTable;

@@ -4,14 +4,14 @@ const Node = require('./node.js');
 
 class LinkedList {
 
-  constructor() {
-    this.head = null;
-    this.current = this.head;
+  constructor(head = null, Node) {
+    this.head = head;
+    this.Node = Node;
   }
 
   insert(value) {
     this.current = this.head;
-    let node = new Node(value);
+    let node = new this.Node(value);
     node.next = this.head;
     this.head = node;
   }
@@ -47,14 +47,15 @@ class LinkedList {
   append(value) {
     this.current = this.head;
     if (this.head === null) {
-      this.head = new Node(value);
+      this.head = new this.Node(value);
+      return;
     }
 
     while (this.current !== null) {
-      if (this.current.next === null) {
+      if (this.current.next === null && this.current.value !== value) {
 
-        let node = new Node(value);
-
+        let node = value;
+        // console.log(node);
         this.current.next = node;
 
         this.current = this.current.next;
