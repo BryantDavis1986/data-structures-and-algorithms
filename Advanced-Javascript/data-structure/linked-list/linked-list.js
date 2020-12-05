@@ -113,19 +113,20 @@ class LinkedList {
       throw new console.error('Key cannot be a negative number');
     }
 
-    while (k > 0) {
-      if (running.next !== null) {
+
+    while (running.next !== null) {
+      if(running.next && k > 0){
         k--;
         running = running.next;
       }
-      else {
+      else if(!running.next){
         throw new console.error('K cannot be same length as Linked List');
       }
-    }
+      else{
 
-    while (running.next !== null) {
-      walking = walking.next;
-      running = running.next;
+        walking = walking.next;
+        running = running.next;
+      }
     }
     return walking.value;
   }
