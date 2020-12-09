@@ -9,26 +9,19 @@ class Tree{
     }
 
     preOrder(root){
-        if(root.leftChild === null && root.rightChild === null){
-            return new Error('Your tree is empty')
-        }
         let array = [];
-        let current = root;
-        this.preOrder2(current, array);
+        if(root) array;
+        return this.preOrder2(root, array);
+    }
+
+    preOrder2(root, array){
+        array.push(root.array);
+
+        if(root.leftChild) this.preOrder2(root.leftChild, array)
+        if(root.rightChild) this.preOrder2(root.rightChild, array);
+
         return array;
 
-    }
-    preOrder2(root, array){
-
-        array.push(root.value);
-        
-        if(root.leftChild !== null){
-            this.preOrder2(root.leftChild, array);
-        }
-
-        if(root.rightChild !== null){
-            this.preOrder2(root.rightChild, array);
-        }
     }
    postOrder(root){
         if(root.leftChild === null && root.rightChild === null){
@@ -92,25 +85,23 @@ class Tree{
             return result;
         }
         // a real queue is faster but this does the trick for now
+        let max = 0;
         let queue = [];
     queue.push(root);
         while(queue.length > 0){
-            let row = [];
-            let rowSize = queue.length;
-            while(rowSize > 0){
                 let currentNode = queue.shift();
-                if(currentNode.leftChild){
-                    queue.push(currentNode.leftChild);
+                for(let i = 0; i < currentNode.children.length; i++){
+                    if(currentNode.children[i]){
+                        queue.push(currentNode.children[i]);
+                    }
+                    
                 }
-                if(currentNode.rightChild){
-                    queue.push(currentNode.rightChild);
+                if(max < currentNode.value){
+                    max = currentNode.value;
                 }
-                row.push(currentNode.value);
-                rowSize--;
-            }
             // result.push(row)
         }
-        return result;
+        return max;
     }
 }
 
