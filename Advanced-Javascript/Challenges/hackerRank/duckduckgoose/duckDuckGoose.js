@@ -1,6 +1,6 @@
 'use strict';
 
-const Queue = require('../../data-structure/StacksandQueues/queue.js');
+const Queue = require('../../../../data-structure/StacksandQueues/queue.js');
 
 function duckDuckGoose(array, k){
     if(array.length <= 0){
